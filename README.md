@@ -42,3 +42,6 @@ In the end:
 $ ./shutdown-cassandra-cluster.sh
 $ docker network rm dulher-kafka-cassandra-network
 ````
+
+### Results
+All files with results are in <i>results</i> directory.
