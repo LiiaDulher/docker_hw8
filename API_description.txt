@@ -1,0 +1,43 @@
+1: Return all transactions for specified *`uid`*(nameOrig) which are fraud
+2: Return three transactions for specified *`uid`*(nameOrig) with the most amount
+3: Return money amount received by specified *`uid`*(nameDest) from *`start_date`* to *`end_date`*
+
+
+Send GET requests with json body:
+{ 
+  "query_number": num,
+  "params": {
+            "param1": value1,
+            "param2": value2,
+            .
+            .
+            .
+            } 
+}
+ where 'params' for each query are:
+ { 
+ 1: [uid];
+ 2: [uid];
+ 3: [uid, start_date, end_date]
+ }
+ 
+ `uid`: string, `start_date`: string in format yyyy-mm-dd, `end_date`: string in format yyyy-mm-dd
+ 
+ Response can be with code 200 or 400 and field json:
+ if response code is 200: 
+ {
+ "columns_names": tuple or one column name,
+ "rows": list 
+ }
+ where columns names for each query are:
+ {
+ 1: [step, type, amount, nameOrig, oldbalanceOrg, newbalanceOrig, nameDest, oldbalanceDest, newbalanceDest, isFraud, transaction_date];
+ 2: [step, type, amount, nameOrig, oldbalanceOrg, newbalanceOrig, nameDest, oldbalanceDest, newbalanceDest, isFraud, transaction_date];
+ 3: [total_amount];
+ } 
+ If there are one column, than `rows` list contains strings; if there are two columns, `rows` list contains tuples of strings
+ 
+ if response code is 400:
+ {
+ "err": description of error
+ }
