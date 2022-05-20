@@ -23,4 +23,5 @@ $ ./python-producer.sh
 $ ./python-consumer.sh
 $ ./shutdown-cluster.sh
 $ ./shutdown-cassandra-cluster.sh
+$ docker network rm dulher-kafka-cassandra-network
 ````
