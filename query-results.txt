@@ -1,0 +1,59 @@
+Request json parameter:
+{'params': {'uid': 'C1420196421'}, 'query_number': 1}
+Result:
+{'columns_names': ['step',
+                   'type',
+                   'amount',
+                   'nameOrig',
+                   'oldbalanceOrg',
+                   'newbalanceOrig',
+                   'nameDest',
+                   'oldbalanceDest',
+                   'newbalanceDest',
+                   'isFraud',
+                   'transaction_date'],
+ 'rows': [[1,
+           'TRANSFER',
+           '2806.0',
+           'C1420196421',
+           '2806.0',
+           '0.0',
+           'C972765878',
+           '0.0',
+           '0.0',
+           True,
+           '2022-05-05']]}
+           
+Request json parameter:
+{'params': {'uid': 'C975033189'}, 'query_number': 2}
+Result:
+{'columns_names': ['step',
+                   'type',
+                   'amount',
+                   'nameOrig',
+                   'oldbalanceOrg',
+                   'newbalanceOrig',
+                   'nameDest',
+                   'oldbalanceDest',
+                   'newbalanceDest',
+                   'isFraud',
+                   'transaction_date'],
+ 'rows': [[1,
+           'PAYMENT',
+           '2867.14',
+           'C975033189',
+           '943.0',
+           '0.0',
+           'M962287291',
+           '0.0',
+           '0.0',
+           False,
+           '2022-04-28']]}
+
+Request json parameter:
+{'params': {'end_date': '2022-05-20',
+            'start_date': '2022-04-01',
+            'uid': 'C997608398'},
+ 'query_number': 3}
+Result:
+{'columns_names': 'total amount', 'rows': ['2967227.70']}
