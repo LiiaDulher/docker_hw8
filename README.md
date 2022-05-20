@@ -15,9 +15,11 @@ $ sudo chmod +x shutdown-cluster.sh
 $ sudo chmod +x python-producer.sh
 $ sudo chmod +x python-consumer.sh
 ````
+Run <i>python-producer.sh</i> and <i>python-consumer.sh</i> in different windows. You can stop them using Ctrl+C.
 ````
 $ ./run-kafka-cluster.sh
 $ ./run-cassandra-cluster.sh
 $ ./python-producer.sh
+$ ./python-consumer.sh
 $ ./shutdown-cluster.sh
 ````
