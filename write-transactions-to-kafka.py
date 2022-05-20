@@ -26,7 +26,7 @@ class KafkaTransactionsWriter:
                 transaction[self.header[i]] = data[i]
             random_number_of_days = random.randrange(30)
             transaction_date = datetime.date.today() - datetime.timedelta(days=random_number_of_days)
-            transaction['transaction_date'] = transaction_date.strftime("%y-%m-%d")
+            transaction['transaction_date'] = transaction_date.strftime("%Y-%m-%d")
             self.producer.send(self.topic, transaction)
             k += 1
             if k == 20:
