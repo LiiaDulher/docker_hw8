@@ -22,4 +22,5 @@ $ ./run-cassandra-cluster.sh
 $ ./python-producer.sh
 $ ./python-consumer.sh
 $ ./shutdown-cluster.sh
+$ ./shutdown-cassandra-cluster.sh
 ````
