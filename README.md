@@ -5,6 +5,7 @@ Kafka-Cassandra
 
 ### Prerequiments
 Please put file <b>PS_20174392719_1491204439457_log.csv</b> in this directory.<br>
+It takes about 65 seconds for Cassandra node to start, so <i>run-cassandra.sh</i> will start node about <b>1 minute</b>.
 
 ### Usage
 ````
