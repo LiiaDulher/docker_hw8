@@ -23,6 +23,13 @@ $ ./run-cassandra-cluster.sh
 $ ./python-producer.sh
 $ ./python-consumer.sh
 $ ./shutdown-cluster.sh
-$ ./shutdown-cassandra-cluster.sh
 $ docker network rm dulher-kafka-cassandra-network
+````
+Run app and use API to comunicate or given client.
+````
+$ ./cassandra-app.sh
+````
+````
+pip install requests
+python3 client.py
 ````
