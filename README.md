@@ -29,7 +29,7 @@ $ ./shutdown-cluster.sh
 Run app:
 ````
 $ ./cassandra-app.sh
-# use given client or any otheer program
+# use given client or any other program
 $ ./shutdown-app.sh
 ````
 Client usage:
