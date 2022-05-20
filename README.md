@@ -15,6 +15,8 @@ $ sudo chmod +x shutdown-cassandra-cluster.sh
 $ sudo chmod +x shutdown-cluster.sh
 $ sudo chmod +x python-producer.sh
 $ sudo chmod +x python-consumer.sh
+$ sudo chmod +x cassandra-app.sh
+$ sudo chmod +x shutdown-app.sh
 ````
 Run <i>python-producer.sh</i> and <i>python-consumer.sh</i> in different windows. You can stop them using Ctrl+C.
 ````
@@ -23,13 +25,20 @@ $ ./run-cassandra-cluster.sh
 $ ./python-producer.sh
 $ ./python-consumer.sh
 $ ./shutdown-cluster.sh
-$ docker network rm dulher-kafka-cassandra-network
 ````
-Run app and use API to comunicate or given client.
+Run app:
 ````
 $ ./cassandra-app.sh
+# use given client or any otheer program
+$ ./shutdown-app.sh
 ````
+Client usage:
 ````
 pip install requests
 python3 client.py
+````
+In the end:
+````
+$ ./shutdown-cassandra-cluster.sh
+$ docker network rm dulher-kafka-cassandra-network
 ````
